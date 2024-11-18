@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About me</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="icon.jpg" style="height:10vh" border-radius="50%"> 
+                <div class="text-content">
+                    <h1>
+                        <b>Leo Antonius Khosashi</b>                
+                    </h1>
+                    <h3>
+                        Graphic Designer and Illustrator
+                    </h3>
+                    <h3>
+                        <label class="hamburger" for="menu-toggle">☰</label>
+                        <input type="checkbox" id="menu-toggle" onclick="document.querySelector('.column').classList.toggle('active')">
+                    </h3>
+                </div>
+        </header>
+
+        <div class="row">
+            <div class="column left">
+                <a href="porto.html"><p class="sidemenu"> <b>Home</b></p></a>
+                <a href="about me.html"><p class="sidemenu"> <b>About Me</b></p></a>
+                <a href="contacts.html"><p class="sidemenu"> <b>Contacts</b></p></a>
+                    <div class="social">
+                        <ul, style="list-style-type: none";>
+                            <li><b>Instagram</b>: @leo_456321</li>
+                            <li><b>pixelfed</b>: blueglasses</li>
+                            <li><b>mastodon</b>: blueglasses</li>
+                            <li><b>linkedin</b>: Leo Antonius Khosashi</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="column right">
+                <div class="greetings">
+                    <h2>About me</h2>
+                </div>
+                <div class="collapsible">
+                    <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+                        <h2>Who am i?</h2>
+                    </div>
+                    <div class="aboutme-container">
+                        <div class="aboutme">
+                            <p>My name is Leo Antonius Khosashi, age 20 years old. I am currently enrolled in
+                                Institut Teknologi Batam or ITEBA for short. I have a passion for arts
+                                and more than anything, I like to experiment with colors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapsible">
+                    <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+                        <h2>My Education</h2>
+                    </div>
+                    <div class="aboutme-container">
+                        <div class="aboutme">
+                         <h2>SMA Mondial</h2>
+                            <h3>High school diplpoma</h3>
+                            <p>8/2019-5/2022</p>
+                        </div>
+                        <div class="aboutme">
+                            <h2>ITEBA</h2>
+                            <h3>Desain Komunikasi Visual</h3>
+                            <p>9/2022-present</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapsible">
+                    <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+                        <h2>My Experience</h2>
+                    </div>
+                    <div class="aboutme-container">
+                        <div class="aboutme">
+                            <p>Currently, i do not have any professional experience in the field of Designer
+                                however, i have done several practices may it be personal project or assignments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+            document.addEventListener('click', function(event) {
+                const sidebar = document.querySelector('.sidebar');
+                const checkbox = document.getElementById('menu-toggle');
+                if (!sidebar.contains(event.target) && !checkbox.contains(event.target)) {
+                    sidebar.classList.remove('active');
+                    checkbox.checked = false;
+
+
+        window.addEventListener('resize', function() {
+            const sidebar = document.querySelector('.column.left');
+            const checkbox = document.getElementById('menu-toggle');
+            if (window.innerWidth > 820) {
+                sidebar.classList.remove('active'); // Remove active class to show sidebar
+                checkbox.checked = false; 
+        }
+    });
+                }
+            });
+        </script>
+    </body>
+
+
+    

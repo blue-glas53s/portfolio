@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contacts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+      <header>
+          <img src="icon.jpg" style="height:10vh" border-radius="50%"> 
+              <div class="text-content">
+                  <h1>
+                      <b>Leo Antonius Khosashi</b>                
+                  </h1>
+                  <h3>
+                      Graphic Designer and Illustrator
+                  </h3>
+                  <h3>
+                      <label class="hamburger" for="menu-toggle">☰</label>
+                      <input type="checkbox" id="menu-toggle" onclick="document.querySelector('.column').classList.toggle('active')">
+                  </h3>
+              </div>
+      </header>
+
+      <div class="row">
+          <div class="column left">
+              <a href="porto.html"><p class="sidemenu"> <b>Home</b></p></a>
+              <a href="about me.html"><p class="sidemenu"> <b>About Me</b></p></a>
+              <a href="contacts.html"><p class="sidemenu"> <b>Contacts</b></p></a>
+                  <div class="social">
+                      <ul, style="list-style-type: none";>
+                          <li><b>Instagram</b>: @leo_456321</li>
+                          <li><b>pixelfed</b>: blueglasses</li>
+                          <li><b>mastodon</b>: blueglasses</li>
+                          <li><b>linkedin</b>: Leo Antonius Khosashi</li>
+                      </ul>
+                  </div>
+          </div>
+
+          <div class="column right">
+            <div class="greetings">
+              <h2>Contacts</h2>
+          </div>
+            <div class="collapsible">
+              <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+                <h2>Email</h2>
+              </div>
+              <div class="aboutme">
+                <h3>leoantoniuskhosashi@tutanota.com</h3>
+              </div>
+            </div>
+            <div class="collapsible">
+            <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+              <h2>Whatsapp</h2>
+            </div>
+              <div class="aboutme">
+                <a href="https://wa.me/0811703689">
+                  <h3>08117036869</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <script>
+          
+          document.addEventListener('click', function(event) {
+              const sidebar = document.querySelector('.sidebar');
+              const checkbox = document.getElementById('menu-toggle');
+              if (!sidebar.contains(event.target) && !checkbox.contains(event.target)) {
+                  sidebar.classList.remove('active');
+                  checkbox.checked = false;
+
+
+      window.addEventListener('resize', function() {
+          const sidebar = document.querySelector('.column.left');
+          const checkbox = document.getElementById('menu-toggle');
+          if (window.innerWidth > 820) {
+              sidebar.classList.remove('active'); // Remove active class to show sidebar
+              checkbox.checked = false; 
+      }
+  });
+              }
+          });
+      </script>
+  </body>
