@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Portfolio Leo Antonius Khosashi</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="gallery.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="icon.png" style="height:10vh" border-radius="50%"> 
+                <div class="text-content">
+                    <h1>
+                        <b>Leo Antonius Khosashi</b>                
+                    </h1>
+                    <h3>
+                        Graphic Designer and Illustrator
+                    </h3>
+                    <h3>
+                        <label class="hamburger" for="menu-toggle">☰</label>
+                        <input type="checkbox" id="menu-toggle" onclick="document.querySelector('.column').classList.toggle('active')">
+                    </h3>
+                </div>
+            
+        </header>
+        <div class="row">
+            <div class="column left">
+                <a href="index.html"><p class="sidemenu"> <b>Home</b></p></a>
+                <a href="porto.html"><p class="sidemenu"> <b>Gallery</b></p></a>
+                <a href="about me.html"><p class="sidemenu"> <b>About Me</b></p></a>
+                <a href="contacts.html"><p class="sidemenu"> <b>Contacts</b></p></a>
+                    <div class="social">
+                        <ul, style="list-style-type: none";>
+                            <li><b>Instagram</b>:<a href="https://www.instagram.com/leo_456321/"> @leo_456321</a></li>
+                            <li><b>pixelfed</b>: <a href="https://pixelfed.art/blueglasses">blueglasses</a></li>
+                            <li><b>mastodon</b>: <a href="https://mastodon.social/@blueglassess">blueglasses</a></li>
+                            <li><b>linkedin</b>: <a href="https://linkedin.com/in/leo-antonius-khosashi-456363254">Leo Antonius Khosashi</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div class="column right">
+                <div class="greetings">
+                    <h1>Gallery</h1>
+                </div>
+                <div id="image-modal" class="modal">
+                    <div class="modal-content">
+                        <img id="image-viewer-src" src="" alt="" />
+                        <p id="image-description"></p>
+                        <button class="close" onclick="closeModal()">X</button>
+                    </div>
+                  </div>
+                <div class="collapsible">
+                    <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+                        <h2>Illustrations</h2>
+                    </div>
+                    <div class="gallery-container">
+                        <div class="gallery">
+                            <img src="illus/1.png" data-description="Ini adalah sebuah lukisan landscape yang terinspirasi oleh game 'The Breath Of The Wild'" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/2.png" data-description="karya ini adalah sebuah poster yang direquest oleh teman yang sedang menulis cerita berkaitan dengan 'Super Smash Bros'" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/3.png" data-description="sebuah illustrasi bunga amarilis" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/4.jpg" data-description="karya ini dilukis sebagai avatar sendiri untuk dijadikan sebagai sebuah profile picture" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/5.jpg" data-description="karya ini dibuat sebagai tugas illustrasi yang bertema 'gugur'. ide dari karya ini didapatkan dari sebuah mimpi" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/6.jpg" data-description="yang awalnya sebuah karya tugas bertema 'seram', kemudian digambar ulang secara digital untuk mencoba mendapatkan suasana yang lebih seram" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/7.jpg" data-description="karya ini dibuat sebagai tugas gambar dengan tema 'keramaian'. foto yang digunakan sebagai referensi adalah foto dari prom sma saya" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/8.png" data-description="karya in idibuat sebgai sebuah eksperimentasi warna, dan bentuk" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/9.png" data-description="karya yang direquest oleh teman yang menggambarkan avatar saya dengan karakter yang merepresentasikan teman tersebut" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/10.png" data-description="karya tugas karakter desain diri sendiri, dengan dasar desainnya diambil dari avatar saya yang saya sudah buat sebelumnya" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                        <div class="gallery">
+                            <img src="illus/11.jpg" data-description="sebuah tugas poster anti drug, dengan style grunge" onclick="showImage(this.src, this.dataset.description)">
+                        </div>
+                    </div>
+                </div>
+                    <div class="collapsible">
+                        <div class="titles" clearfix onclick="this.parentElement.classList.toggle('active');">
+                            <h2>Graphic Designs</h2>
+                        </div>
+                        <div class="gallery-container">
+                            <div class="gallery">
+                                <img src="gd/1.png" alt="Brosur 2" data-description="sebuah cover dari brosur yang dibuat sebagai tugas yang menunjukkan pariwisata Batam di pantai Melur" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <img src="gd/2.png" alt="brosur2b" data-description="bagian dalam dari brosur tugas yang berisi informasi tentang pantai Melur" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <img src="gd/3.png" alt="brosur2b" data-description="sebuah cover dari brosur yang dibuat sebagai tugas yang menunjukkan ITEBA" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <img src="gd/4.png" alt="brosur2b" data-description="bagian dalam dari brosur tugas yang berisi informasi tentang ITEBA dan DKV" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <img src="gd/5.png" alt="brosur2b" data-description="sebuah pos greeting untuk idul adha sebagai latihan, desain ini mengambil palet warna yang biasa dikaitkan dengan Islam" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <img src="gd/6.png" alt="brosur2b" data-description="sebuah pos greeting untuk idul adha sebagai latihan, desain ini dan sebelumnya lebih fokus kepada sihlouette" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <div class="titles" onclick="this.parentElement.classList.toggle('active');">
+                            <h2>Animations</h2>
+                        </div>
+                        <div class="gallery-container">
+                            <div class="gallery">
+                                <video controls>
+                                <source src="anim/1.mp4" data-description="sebuah tugas mereinterpretasi musik 'can't stop the feeling' oleh Justin Timberlake. Tigas ini juga dibuat oleh mahasiswa lain bernama Victor dan Sherry Teo, dengan saya mengerjakan bagian pertamanya dan backgroundnya" onclick="showImage(this.src, this.dataset.description)">
+                                </video>
+                            </div>
+                            <div class="gallery">
+                                <video controls>
+                                    <source src="anim/2.mp4" data-description="tugas animasi walk cycle, dengan pecobaan untuk menunjukkan efek hujan." onclick="showImage(this.src, this.dataset.description)">
+                                </video>
+                            </div>
+                            <div class="gallery">
+                                <video controls>
+                                    <source src="anim/3.mp4" data-description="tugas rotoscope animasi, dengan referensi diambil dari musik video 'Very Nice' oleh seventeen. video ini juga dibuat oleh Angeline, Hanifah Hasna, Khosyi Daffa dan Desti Fitria, dengan saya mengerjakan bagian pertama dan beberapa bagian still shot." onclick="showImage(this.src, this.dataset.description)">
+                                </video>
+                            </div>
+                            <div class="gallery">
+                                <video controls>
+                                    <source src="anim/4.mp4" data-description="sebuah latihan animasi bouncing ball" onclick="showImage(this.src, this.dataset.description)">
+                                </video>
+                            </div>
+                            <div class="gallery">
+                                <video controls>
+                                    <source src="anim/5.mp4" data-description="sebuah latihan tugas animasi dengan teknik rigging/pupetting dan pergerakkan kamera." onclick="showImage(this.src, this.dataset.description)">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <div class="titles" clearfix onclick="this.parentElement.classList.toggle('active');">
+                            <h2>Renders</h2>
+                        </div>
+                        <div class="gallery-container">
+                            <div class="gallery">
+                                <img src="render/1.png" alt="Brosur 2" data-description="sebuah scene yang dibuat untuk mendapatkan atmosfer salju" onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <img src="render/2.png" alt="brosur2b" data-description="sebuah percobaan untuk render sebuah tempat alam dengan rumput, batu dan pohon, dengan efek kabut." onclick="showImage(this.src, this.dataset.description)">
+                            </div>
+                            <div class="gallery">
+                                <video controls>
+                                    <source src="render/3.mp4">
+                                </video>
+                            </div>
+                    </div>
+            </div>               
+        </div>
+        <script>
+            
+            document.addEventListener('click', function(event) {
+                const sidebar = document.querySelector('.sidebar');
+                const checkbox = document.getElementById('menu-toggle');
+                if (!sidebar.contains(event.target) && !checkbox.contains(event.target)) {
+                    sidebar.classList.remove('active');
+                    checkbox.checked = false;
+
+
+        window.addEventListener('resize', function() {
+            const sidebar = document.querySelector('.column.left');
+            const checkbox = document.getElementById('menu-toggle');
+            if (window.innerWidth > 820) {
+                sidebar.classList.remove('active');
+                checkbox.checked = false; 
+
+        
+        }
+
+        
+    });
+                }
+            });
+        </script>
+
+
+
+  
+        
+    </body>
+       
