@@ -115,6 +115,11 @@ nav ul {
    width: 95%;
 }
 
+.column.left a {
+      text-decoration: none;
+      color: inherit;
+}
+
 .column.right {
    padding: 10px;
    width: 85%;
@@ -155,6 +160,15 @@ footer {
    position: absolute;
    bottom: 0;
    border-radius: 25px;
+}
+
+.social a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.social li:hover {
+color:rgb(41, 54, 114)
 }
 
 .gallery-container {
@@ -294,6 +308,12 @@ div.gallery video {
  }
 
  .modal-content img {
+   width: 70%;
+   border-radius: 25px;
+   box-shadow: 7px 7px 35px rgba(62, 86, 126, 0.3);
+ }
+
+ .modal-content video {
    width: 70%;
    border-radius: 25px;
    box-shadow: 7px 7px 35px rgba(62, 86, 126, 0.3);

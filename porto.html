@@ -51,7 +51,15 @@
                         <p id="image-description"></p>
                         <button class="close" onclick="closeModal()">X</button>
                     </div>
+                </div>
+                <div id="video-modal" class="modal">
+                    <div class="modal-content">
+                    <video id="video-viewer-src" controls></video>
+                    <p id="video-description"></p>
+                    <button class="close" onclick="closeModal()">X</button>
+                </div>
                   </div>
+                  
                 <div class="collapsible">
                     <div class="titles" onclick="this.parentElement.classList.toggle('active');">
                         <h2>Illustrations</h2>
@@ -123,28 +131,28 @@
                         </div>
                         <div class="gallery-container">
                             <div class="gallery">
-                                <video controls>
-                                <source src="anim/1.mp4" data-description="sebuah tugas mereinterpretasi musik 'can't stop the feeling' oleh Justin Timberlake. Tigas ini juga dibuat oleh mahasiswa lain bernama Victor dan Sherry Teo, dengan saya mengerjakan bagian pertamanya dan backgroundnya" onclick="showImage(this.src, this.dataset.description)">
+                                <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                <source src="anim/1.mp4" data-description="sebuah tugas mereinterpretasi musik 'can't stop the feeling' oleh Justin Timberlake. Tugas ini juga dibuat oleh mahasiswa lain bernama Victor dan Sherry Teo, dengan saya mengerjakan bagian pertamanya dan backgroundnya">
                                 </video>
                             </div>
                             <div class="gallery">
-                                <video controls>
-                                    <source src="anim/2.mp4" data-description="tugas animasi walk cycle, dengan pecobaan untuk menunjukkan efek hujan." onclick="showImage(this.src, this.dataset.description)">
+                                <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                    <source src="anim/2.mp4" data-description="tugas animasi walk cycle, dengan pecobaan untuk menunjukkan efek hujan.">
                                 </video>
                             </div>
                             <div class="gallery">
-                                <video controls>
-                                    <source src="anim/3.mp4" data-description="tugas rotoscope animasi, dengan referensi diambil dari musik video 'Very Nice' oleh seventeen. video ini juga dibuat oleh Angeline, Hanifah Hasna, Khosyi Daffa dan Desti Fitria, dengan saya mengerjakan bagian pertama dan beberapa bagian still shot." onclick="showImage(this.src, this.dataset.description)">
+                                <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                    <source src="anim/3.mp4" data-description="tugas rotoscope animasi, dengan referensi diambil dari musik video 'Very Nice' oleh seventeen. video ini juga dibuat oleh Angeline, Hanifah Hasna, Khosyi Daffa dan Desti Fitria, dengan saya mengerjakan bagian pertama dan beberapa bagian still shot.">
                                 </video>
                             </div>
                             <div class="gallery">
-                                <video controls>
-                                    <source src="anim/4.mp4" data-description="sebuah latihan animasi bouncing ball" onclick="showImage(this.src, this.dataset.description)">
+                                <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                    <source src="anim/4.mp4" data-description="sebuah latihan animasi bouncing ball">
                                 </video>
                             </div>
                             <div class="gallery">
-                                <video controls>
-                                    <source src="anim/5.mp4" data-description="sebuah latihan tugas animasi dengan teknik rigging/pupetting dan pergerakkan kamera." onclick="showImage(this.src, this.dataset.description)">
+                                <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                    <source src="anim/5.mp4" data-description="sebuah latihan tugas animasi dengan teknik rigging/pupetting dan pergerakkan kamera.">
                                 </video>
                             </div>
                         </div>
@@ -161,8 +169,8 @@
                                 <img src="render/2.png" alt="brosur2b" data-description="sebuah percobaan untuk render sebuah tempat alam dengan rumput, batu dan pohon, dengan efek kabut." onclick="showImage(this.src, this.dataset.description)">
                             </div>
                             <div class="gallery">
-                                <video controls>
-                                    <source src="render/3.mp4">
+                                <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                    <source src="render/3.mp4" data-description="sebuah tugas yang dibuat sebagai video undangan pernikahan. video ini dibuat dalam style ghibli">
                                 </video>
                             </div>
                     </div>

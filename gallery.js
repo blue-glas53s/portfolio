@@ -8,7 +8,20 @@ function showImage(src, description) {
   }
 
   function closeModal() {
-    const modal = document.getElementById('image-modal');
-    modal.style.display = 'none';
+    const imageModal = document.getElementById('image-modal');
+    const videoModal = document.getElementById('video-modal');
+    imageModal.style.display = 'none';
+    videoModal.style.display = 'none';
   }
+  
+  
+  function showVideo(src, description) {
+    const videoViewer = document.getElementById('video-viewer-src');
+    videoViewer.src = src;
+    const videoDescription = document.getElementById('video-description');
+    videoDescription.textContent = description;
+    const modal = document.getElementById('video-modal');
+    modal.style.display = 'block';
+  }
+  
   

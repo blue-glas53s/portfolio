@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, inital-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="gallery.js"></script>
     </head>
 
     <body>
@@ -44,27 +45,41 @@
                 <div class="greetings">
                     <h1>Welcome</h1>
                 </div>
+                <div id="image-modal" class="modal">
+                    <div class="modal-content">
+                        <img id="image-viewer-src" src="" alt="" />
+                        <p id="image-description"></p>
+                        <button class="close" onclick="closeModal()">X</button>
+                    </div>
+                </div>
+                <div id="video-modal" class="modal">
+                    <div class="modal-content">
+                    <video id="video-viewer-src" controls></video>
+                    <p id="video-description"></p>
+                    <button class="close" onclick="closeModal()">X</button>
+                </div>
+                  </div>
                 <div class="collapsible">
                     <div class="titles" onclick="this.parentElement.classList.toggle('active');">
                         <h1>Featured Work</h1>
                     </div>
                     <div class="gallery-featured">
                         <div class="gallery">
-                            <img src="illus/1.png">
+                            <img src="illus/1.png" data-description="Ini adalah sebuah lukisan landscape yang terinspirasi oleh game 'The Breath Of The Wild'" onclick="showImage(this.src, this.dataset.description)">
                         </div>
                         <div class="gallery">
-                            <img src="illus/6.jpg">
+                            <img src="illus/6.jpg" data-description="yang awalnya sebuah karya tugas bertema 'seram', kemudian digambar ulang secara digital untuk mencoba mendapatkan suasana yang lebih seram" onclick="showImage(this.src, this.dataset.description)">
                         </div>
                         <div class="gallery">
-                            <img src="gd/1.png">
+                            <img src="gd/1.png" alt="Brosur 2" data-description="sebuah cover dari brosur yang dibuat sebagai tugas yang menunjukkan pariwisata Batam di pantai Melur" onclick="showImage(this.src, this.dataset.description)">
                         </div>
                         <div class="gallery">
-                            <img src="render/1.png">
+                            <img src="render/1.png" alt="Brosur 2" data-description="sebuah scene yang dibuat untuk mendapatkan atmosfer salju" onclick="showImage(this.src, this.dataset.description)">
                         </div>
                         <div class="gallery">
-                            <video controls>
-                                <source src="anim/2.mp4">
-                            </video>    
+                            <video onclick="showVideo(this.children[0].src, this.children[0].dataset.description)">
+                                <source src="anim/2.mp4" data-description="tugas animasi walk cycle, dengan pecobaan untuk menunjukkan efek hujan.">
+                            </video>
                         </div>
                     </div>
                 </div>
