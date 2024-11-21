@@ -14,6 +14,7 @@ body {
 }
   
 header {
+   margin: 0;
    background: linear-gradient(22deg, 
    rgba(146, 190, 255, 0.7) 0%, 
    rgb(146, 189, 255, 0.8) 50%, 
@@ -37,6 +38,10 @@ header .text-content {
     padding: 0;
     margin: 0;
     font-size: 50PX;
+    text-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.greetings h1 {
+   text-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 .hamburger {
@@ -256,6 +261,21 @@ div.gallery video {
    justify-content: space-between;
    gap: 2opx;
 }
+
+.aboutme li a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.aboutme a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.aboutme a:hover {
+   color: aliceblue;
+}
+
 
 
 .collapsible {
